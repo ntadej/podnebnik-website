@@ -1,14 +1,6 @@
 import feather from "feather-icons"
 import "../styles/main.sass"
 
-// Language selector
-
-let languageSelector = document.getElementById("language-selector")
-
-languageSelector.addEventListener('click', function () {
-    languageSelector.classList.toggle("is-active")
-})
-
 // Slide menu
 
 let menuToggle = document.getElementById("menuToggle")
@@ -24,8 +16,10 @@ feather.replace()
 
 // Visualisations
 
-import { emissionsChart } from "./components/src/Components/EmissionsChart.fs"
+import { electricityChart } from "./fsharp/src/Visualisations/ElectricityChart.fs"
+import { emissionsChart } from "./fsharp/src/Visualisations/EmissionsChart.fs"
 
-window.Components = {
+window.Visualisations = {
+    electricityChart: electricityChart,
     emissionsChart: emissionsChart
 }

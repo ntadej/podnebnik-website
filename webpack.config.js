@@ -44,6 +44,7 @@ module.exports = (env, argv) => {
 
         devServer: {
             port: 8080,
+            host: '127.0.0.1',
             publicPath: PUBLIC_PATH,
             hot: true,
             overlay: {
@@ -52,7 +53,7 @@ module.exports = (env, argv) => {
             },
             proxy: {
                 "/": {
-                    target: "http://localhost:8000",
+                    target: "http://127.0.0.1:8000",
                     changeOrigin: true
                 }
             },
